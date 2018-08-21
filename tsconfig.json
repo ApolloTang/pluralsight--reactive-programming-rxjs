@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "strict": true,
+    "pretty": true,
+    "target": "es5",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "es2015",
+      "es5",
+      "es6"
+    ]
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "babelCore": "@babel/core"
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
