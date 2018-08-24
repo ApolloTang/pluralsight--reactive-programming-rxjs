@@ -1,6 +1,8 @@
 import {Observable} from 'rxjs/Observable';
-import {map}    from 'rxjs/operators';
-import {filter} from 'rxjs/operators';
+import {
+  map,
+  filter
+} from 'rxjs/operators';
 // https://stackoverflow.com/questions/47198706/rxjs-pipe-and-lettable-operator-map-this-context-of-type-void-is-not-assi/47198895
 
 let numbers = [1,5,10];

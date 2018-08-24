@@ -6,6 +6,7 @@
 // import './2-08-01-Going-async-w-setTimeout.ts';
 
 // import './2-09-01-rxjx-operator--doesnot-work.ts';
-// import './2-09-01-rxjx-operator--fixed.ts';
-import './2-09-03-rxjx-operator--inferior-import.ts';
+import './2-09-02-rxjx-operator--fixed.ts';
+// import './2-09-03-rxjx-operator--inferior-import.ts';
+// import './2-09-04-import-the-full-rxjs-lib.ts';
 
