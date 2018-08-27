@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = ({env=[], mode='development'}={env:[], mode:'development'}) => {
   const config = {
@@ -29,7 +30,8 @@ module.exports = ({env=[], mode='development'}={env:[], mode:'development'}) => 
       ]
     },
     plugins: [
-      new HtmlWebpackPlugin()
+      new HtmlWebpackPlugin(),
+      new CopyWebpackPlugin([ { from: 'assets', to: 'assets' } ])
     ]
   }
   return config;
