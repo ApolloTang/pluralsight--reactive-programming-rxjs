@@ -7,6 +7,9 @@
 
 // import './2-09-01-rxjx-operator--doesnot-work.ts'; // does not work so thie file is commented it out by name it with extension '.ts_'
 // import './2-09-02-rxjx-operator--fixed.ts';
-import './2-09-03-rxjx-operator--inferior-import.ts';
+// import './2-09-03-rxjx-operator--inferior-import.ts';
 // import './2-09-04-import-the-full-rxjs-lib.ts';  // this is a bug and I have not solve the problem so thie file is commented out with extentions '.ts_'
+
+import './3-02-01-processing-mouse-event.ts';
+
 
