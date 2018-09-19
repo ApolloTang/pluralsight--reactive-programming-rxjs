@@ -11,7 +11,7 @@
 // import './2-09-04-import-the-full-rxjs-lib.ts';  // this is a bug and I have not solve the problem so thie file is commented out with extentions '.ts_'
 
 // import './3-02-01-processing-mouse-event.ts';
-import './3-03-1-Sending-Requests-w-XmlHttpRequest.ts';
-// import './3-04-1-inner-observeble.ts';
+// import './3-03-1-Sending-Requests-w-XmlHttpRequest.ts';
+import './3-04-1-using-flatmap-to-process-inner-observ.ts';
 
 
