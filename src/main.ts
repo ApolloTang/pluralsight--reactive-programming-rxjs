@@ -12,6 +12,7 @@
 
 // import './3-02-01-processing-mouse-event.ts';
 // import './3-03-1-Sending-Requests-w-XmlHttpRequest.ts';
-import './3-04-1-using-flatmap-to-process-inner-observ.ts';
+// import './3-04-1-using-flatmap-to-process-inner-observ.ts';
+ import './3-04-2-using-flatmap-to-process-inner-observ.ts';
 
 

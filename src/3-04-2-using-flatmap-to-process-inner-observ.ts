@@ -1,6 +1,8 @@
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap'; // this import flatMap, see:
+                                     // https://stackoverflow.com/questions/39441629/flatmap-missing-after-upgrading-to-rc-6-and-rxjs-beta-11
 
 const button = document.createElement('button');
 button.innerText = 'click me';
@@ -44,9 +46,7 @@ import {Observer} from 'rxjs/Observer';
 class MyObjserver implements Observer<number> {
 
   next(value: any) {
-    load('assets/movies.json')
-      .subscribe( // <<<<<<<< this is a nested subscription [undesire-able]
-        (value: any) => console.log('xxxxxx value: ', JSON.stringify(value, null, 2)),
+    console.log('xxxxxx value: ', JSON.stringify(value, null, 2))
               // xxxxxx value:  [
               //   {
               //     "title": "Star Wars"
@@ -58,7 +58,7 @@ class MyObjserver implements Observer<number> {
               //     "title": "Starship Troopers"
               //   }
               // ]
-      )
+
   }
 
   error(e: any){
@@ -70,7 +70,10 @@ class MyObjserver implements Observer<number> {
   }
 
 }
-sourceClick.subscribe( new MyObjserver() );
+
+sourceClick
+  .flatMap( e => load('assets/movies.json'))  // <<< we have flatten the nested subscription [desire-able]
+  .subscribe( new MyObjserver())
 
 
 // source.subscribe(
