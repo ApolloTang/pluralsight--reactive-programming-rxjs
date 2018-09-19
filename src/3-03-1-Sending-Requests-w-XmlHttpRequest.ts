@@ -13,16 +13,19 @@ function load(url: string) {
   const xhr = new XMLHttpRequest();
   xhr.addEventListener("load", ()=>{
     const movies = JSON.parse(xhr.responseText)
-    movies.forEach((m:any)=>{
-      let div = document.createElement('div');
-      div.innerText = m.title;
-      console.log(div, m)
-      outputDisplay.appendChild(div)
-    })
+    renderMovies(movies)
   });
 
   xhr.open('GET', url)
   xhr.send();
+}
+
+function renderMovies(movies:any[]) {
+  movies.forEach( (m:any)=>{
+    const div = document.createElement('div');
+    div.innerText = m.title;
+    outputDisplay.appendChild(div)
+  })
 }
 
 let sourceClick = Observable
